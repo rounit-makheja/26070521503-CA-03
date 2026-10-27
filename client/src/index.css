@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Design System Tokens & Global CSS
+   Student Task & Assignment Manager
+   Theme: Refined Off-White Background, Deep Navy Typography, Restrained Indigo
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --bg-primary: #F8FAFC;        /* Off-white crisp canvas */
+  --bg-surface: #FFFFFF;        /* Pure white for elevated cards */
+  --bg-subtle: #F1F5F9;         /* Very light slate for input backgrounds / hovered tabs */
+  --bg-subtle-hover: #E2E8F0;
+
+  --border-light: #E2E8F0;      /* Gentle border */
+  --border-focus: #4F46E5;      /* Restrained indigo */
+
+  --text-main: #0F172A;         /* Deep slate/navy for primary text */
+  --text-muted: #64748B;        /* Balanced medium grey for subtitles & labels */
+  --text-dim: #94A3B8;          /* Light grey for placeholders */
+
+  --primary: #4F46E5;           /* Restrained Indigo */
+  --primary-hover: #4338CA;
+  --primary-light: #EEF2FF;      /* Soft tint for badges/active states */
+
+  --danger: #DC2626;            /* Alert crimson */
+  --danger-light: #FEF2F2;
+  --danger-border: #FCA5A5;
+
+  --success: #16A34A;           /* Emerald */
+  --success-light: #F0FDF4;
+  --success-border: #86EFAC;
+
+  --warning: #D97706;           /* Amber */
+  --warning-light: #FFFBEB;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows - Minimal & Tasteful */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+}
+
+/* CSS Reset & Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Form controls reset */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Layout Utilities */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
